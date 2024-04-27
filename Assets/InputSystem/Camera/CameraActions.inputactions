@@ -1,0 +1,54 @@
+{
+    "name": "CameraActions",
+    "maps": [
+        {
+            "name": "CameraMap",
+            "id": "454d1401-c44f-4969-b6c2-ff12c9e8dbeb",
+            "actions": [
+                {
+                    "name": "Previous",
+                    "type": "Button",
+                    "id": "450cfae0-488a-4eb1-819d-8c81e1401e1d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "f8ea62dc-9d73-4c5f-be55-2a75fc073d7e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0a07b73c-43ff-42a0-ace2-0dcb5bc70a6d",
+                    "path": "<Keyboard>/comma",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Previous",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27a608fb-c1f0-4647-ad36-cc8a0084c527",
+                    "path": "<Keyboard>/period",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

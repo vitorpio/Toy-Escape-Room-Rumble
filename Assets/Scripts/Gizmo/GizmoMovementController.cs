@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class GizmoMovementController : MonoBehaviour
@@ -7,7 +8,16 @@ public class GizmoMovementController : MonoBehaviour
     private Rigidbody rigidbody;
     private GizmoActions gizmoActions;
     private Vector3 movementInput;
+    private CameraPositionController cameraPositionController;
 
+    private int[] movementAngles = {
+        0,
+        90,
+        180,
+        -90
+    };
+
+    public CinemachineVirtualCamera camera;
     public float movementSpeed;
 
 
@@ -15,6 +25,7 @@ public class GizmoMovementController : MonoBehaviour
     {
         gizmoActions = new GizmoActions();
         rigidbody = GetComponent<Rigidbody>();
+        cameraPositionController = camera.GetComponent<CameraPositionController>();
     }
 
     void OnEnable()
@@ -27,15 +38,6 @@ public class GizmoMovementController : MonoBehaviour
         gizmoActions.GizmoMap.Disable();
     }
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-    }
-
     void FixedUpdate()
     {
         move();
@@ -43,13 +45,17 @@ public class GizmoMovementController : MonoBehaviour
 
     void move()
     {
+
         // Keyboard movement
         movementInput = gizmoActions.GizmoMap.Movement.ReadValue<Vector3>();
+
+        // Movement angle based on camera position
+        int angle = movementAngles[cameraPositionController.currentCameraPostion];
 
         // Gravity
         var gravity = new Vector3(0, rigidbody.velocity.y + Physics.gravity.y * Time.deltaTime, 0);
 
-        rigidbody.velocity = (movementInput * movementSpeed) + gravity;
+        rigidbody.velocity = (Quaternion.AngleAxis(angle, Vector3.up) * movementInput * movementSpeed) + gravity;
     }
 
 }
