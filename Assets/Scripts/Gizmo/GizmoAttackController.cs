@@ -9,9 +9,9 @@ public class GizmoAttackController : MonoBehaviour
 
     private Vector3[] attackBoxPositions = {
         new(0, 0.4f, 1.25f),
-        new(-1.25f, 0.4f, 0),
-        new(0, 0.4f, -1.25f),
         new(1.25f, 0.4f, 0),
+        new(0, 0.4f, -1.25f),
+        new(-1.25f, 0.4f, 0),
     };
     private float attackReleaseTime = 1f;
 
