@@ -19,6 +19,8 @@ public class GizmoMovementController : MonoBehaviour
 
     public CinemachineVirtualCamera camera;
     public float movementSpeed;
+    public float jumpForce;
+    public bool isJumping = false;
 
 
     void Awake()
@@ -41,11 +43,11 @@ public class GizmoMovementController : MonoBehaviour
     void FixedUpdate()
     {
         move();
+        jump();
     }
 
     void move()
     {
-
         // Keyboard movement
         movementInput = gizmoActions.GizmoMap.Movement.ReadValue<Vector3>();
 
@@ -56,6 +58,15 @@ public class GizmoMovementController : MonoBehaviour
         var gravity = new Vector3(0, rigidbody.velocity.y + Physics.gravity.y * Time.deltaTime, 0);
 
         rigidbody.velocity = (Quaternion.AngleAxis(angle, Vector3.up) * movementInput * movementSpeed) + gravity;
+    }
+
+    void jump()
+    {
+        if (gizmoActions.GizmoMap.Jump.ReadValue<float>() == 1.0f && !isJumping)
+        {
+            rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isJumping = true;
+        }
     }
 
 }

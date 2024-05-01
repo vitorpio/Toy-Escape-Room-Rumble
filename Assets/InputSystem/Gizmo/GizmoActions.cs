@@ -35,6 +35,24 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""51d0f4ac-0f87-47ec-a0a5-afd3b1630633"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""56f590c2-0d2b-487d-b0af-9e429ef89ced"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -92,6 +110,28 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
                     ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ee95148-d7d0-4f44-870e-dbb5d59a5dda"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f69e72e-088d-4b4e-b67e-d7d3c19a278d"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -101,6 +141,8 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
         // GizmoMap
         m_GizmoMap = asset.FindActionMap("GizmoMap", throwIfNotFound: true);
         m_GizmoMap_Movement = m_GizmoMap.FindAction("Movement", throwIfNotFound: true);
+        m_GizmoMap_Jump = m_GizmoMap.FindAction("Jump", throwIfNotFound: true);
+        m_GizmoMap_Attack = m_GizmoMap.FindAction("Attack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,11 +205,15 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GizmoMap;
     private List<IGizmoMapActions> m_GizmoMapActionsCallbackInterfaces = new List<IGizmoMapActions>();
     private readonly InputAction m_GizmoMap_Movement;
+    private readonly InputAction m_GizmoMap_Jump;
+    private readonly InputAction m_GizmoMap_Attack;
     public struct GizmoMapActions
     {
         private @GizmoActions m_Wrapper;
         public GizmoMapActions(@GizmoActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_GizmoMap_Movement;
+        public InputAction @Jump => m_Wrapper.m_GizmoMap_Jump;
+        public InputAction @Attack => m_Wrapper.m_GizmoMap_Attack;
         public InputActionMap Get() { return m_Wrapper.m_GizmoMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -180,6 +226,12 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
         }
 
         private void UnregisterCallbacks(IGizmoMapActions instance)
@@ -187,6 +239,12 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
         }
 
         public void RemoveCallbacks(IGizmoMapActions instance)
@@ -207,5 +265,7 @@ public partial class @GizmoActions: IInputActionCollection2, IDisposable
     public interface IGizmoMapActions
     {
         void OnMovement(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
     }
 }
