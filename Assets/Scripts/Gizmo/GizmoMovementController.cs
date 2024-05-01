@@ -9,6 +9,7 @@ public class GizmoMovementController : MonoBehaviour
     private GizmoActions gizmoActions;
     private Vector3 movementInput;
     private CameraPositionController cameraPositionController;
+    private GizmoAttackController gizmoAttackController;
 
     private int[] movementAngles = {
         0,
@@ -16,10 +17,10 @@ public class GizmoMovementController : MonoBehaviour
         180,
         -90
     };
+    private float movementSpeed = 10.0f;
+    private float jumpForce = 60.0f;
 
     public CinemachineVirtualCamera camera;
-    public float movementSpeed;
-    public float jumpForce;
     public bool isJumping = false;
 
 
@@ -28,6 +29,7 @@ public class GizmoMovementController : MonoBehaviour
         gizmoActions = new GizmoActions();
         rigidbody = GetComponent<Rigidbody>();
         cameraPositionController = camera.GetComponent<CameraPositionController>();
+        gizmoAttackController = GetComponentInChildren<GizmoAttackController>();
     }
 
     void OnEnable()
@@ -43,7 +45,10 @@ public class GizmoMovementController : MonoBehaviour
     void FixedUpdate()
     {
         move();
-        jump();
+        if (!gizmoAttackController.isAttacking)
+        {
+            jump();
+        }
     }
 
     void move()

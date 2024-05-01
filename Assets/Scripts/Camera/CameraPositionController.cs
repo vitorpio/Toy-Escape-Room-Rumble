@@ -21,8 +21,10 @@ public class CameraPositionController : MonoBehaviour
         new(5, 5, 0)
     };
 
-    public int currentCameraPostion = 0;
     public GizmoMovementController gizmoMovementController;
+    public GizmoAttackController gizmoAttackController;
+
+    public int currentCameraPostion = 0;
 
     void Awake()
     {
@@ -84,6 +86,7 @@ public class CameraPositionController : MonoBehaviour
         cinemachineTransposer.m_FollowOffset = cameraPositions[currentCameraPostion];
         cameraCanMove = false;
         Invoke("releaseCameraMovement", cameraMoveReleaseTime);
+        gizmoAttackController.updateAttackBoxPosition(currentCameraPostion);
     }
 
     void releaseCameraMovement()
