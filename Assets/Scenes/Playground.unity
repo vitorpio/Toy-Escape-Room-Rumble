@@ -334,7 +334,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3419680461938966772, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
       propertyPath: m_Name
-      value: Gizmo + Camera
+      value: Gizmo + Camera + HUD
       objectReference: {fileID: 0}
     - target: {fileID: 9054684112899266095, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
       propertyPath: m_LocalPosition.x
