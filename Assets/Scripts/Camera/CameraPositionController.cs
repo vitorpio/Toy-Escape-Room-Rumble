@@ -14,14 +14,15 @@ public class CameraPositionController : MonoBehaviour
     private bool cameraCanMove = true;
     private float cameraMoveReleaseTime = 0.1f;
 
-    public int currentCameraPostion = 0;
-
     private Vector3[] cameraPositions = {
         new (0, 5, -5),
         new (-5, 5, 0),
         new (0, 5, 5),
         new(5, 5, 0)
     };
+
+    public int currentCameraPostion = 0;
+    public GizmoMovementController gizmoMovementController;
 
     void Awake()
     {
@@ -46,7 +47,7 @@ public class CameraPositionController : MonoBehaviour
     {
 
         // Camera Movement
-        if (cameraCanMove)
+        if (cameraCanMove && !gizmoMovementController.isJumping)
         {
             previousPressed = cameraActions.CameraMap.Previous.ReadValue<float>();
             nextPressed = cameraActions.CameraMap.Next.ReadValue<float>();
