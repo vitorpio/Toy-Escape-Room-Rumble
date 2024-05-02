@@ -26,7 +26,7 @@ public class GizmosStatusController : MonoBehaviour
     {
         if (health == minHealth)
         {
-            die();
+            Die();
         }
         else
         {
@@ -44,7 +44,7 @@ public class GizmosStatusController : MonoBehaviour
         }
     }
 
-    private void die()
+    public void Die()
     {
 
     }
