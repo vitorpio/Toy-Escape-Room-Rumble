@@ -979,10 +979,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gear 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7336474806218917265, guid: 3e4037a01b811c850b5229c782153ef3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
