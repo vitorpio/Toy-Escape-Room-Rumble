@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Cinemachine;
 using UnityEngine;
 
 public class CameraPositionController : MonoBehaviour
 {
-    private CinemachineVirtualCamera cinemachineVirtualCamera;
-    private CinemachineTransposer cinemachineTransposer;
     private CameraActions cameraActions;
 
     private float previousPressed = 0.0f;
@@ -14,24 +11,13 @@ public class CameraPositionController : MonoBehaviour
     private bool cameraCanMove = true;
     private float cameraMoveReleaseTime = 0.1f;
 
-    private Vector3[] cameraPositions = {
-        new (0, 5, -5),
-        new (-5, 5, 0),
-        new (0, 5, 5),
-        new(5, 5, 0)
-    };
-
     public GizmoMovementController gizmoMovementController;
     public GizmoAttackController gizmoAttackController;
-
-    public int currentCameraPostion = 0;
+    public Transform gizmoTransform;
 
     void Awake()
     {
         cameraActions = new CameraActions();
-
-        cinemachineVirtualCamera = GetComponent<CinemachineVirtualCamera>();
-        cinemachineTransposer = cinemachineVirtualCamera.GetCinemachineComponent<CinemachineTransposer>();
     }
 
     void OnEnable()
@@ -56,37 +42,21 @@ public class CameraPositionController : MonoBehaviour
 
             if (previousPressed == 1.0f)
             {
-                if (currentCameraPostion == cameraPositions.Length - 1)
-                {
-                    currentCameraPostion = 0;
-                }
-                else
-                {
-                    currentCameraPostion += 1;
-                }
-                updateCameraPosition();
+                updateCameraPosition(-90);
             }
             else if (nextPressed == 1.0f)
             {
-                if (currentCameraPostion == 0)
-                {
-                    currentCameraPostion = cameraPositions.Length - 1;
-                }
-                else
-                {
-                    currentCameraPostion -= 1;
-                }
-                updateCameraPosition();
+                updateCameraPosition(90);
             }
         }
     }
 
-    void updateCameraPosition()
+    void updateCameraPosition(int yAxixRotation)
     {
-        cinemachineTransposer.m_FollowOffset = cameraPositions[currentCameraPostion];
+        gizmoTransform.Rotate(new Vector3(0, yAxixRotation, 0));
         cameraCanMove = false;
         Invoke("releaseCameraMovement", cameraMoveReleaseTime);
-        gizmoAttackController.updateAttackBoxPosition(currentCameraPostion);
+        // gizmoAttackController.updateAttackBoxPosition(gizmoTransform.rotation);
     }
 
     void releaseCameraMovement()

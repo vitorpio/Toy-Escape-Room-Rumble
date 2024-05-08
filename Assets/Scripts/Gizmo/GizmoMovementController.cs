@@ -6,6 +6,7 @@ using UnityEngine;
 public class GizmoMovementController : MonoBehaviour
 {
     private Rigidbody rigidbody;
+    private Transform transform;
     private GizmoActions gizmoActions;
     private Vector3 movementInput;
     private CameraPositionController cameraPositionController;
@@ -28,6 +29,7 @@ public class GizmoMovementController : MonoBehaviour
     {
         gizmoActions = new GizmoActions();
         rigidbody = GetComponent<Rigidbody>();
+        transform = GetComponent<Transform>();
         cameraPositionController = camera.GetComponent<CameraPositionController>();
         gizmoAttackController = GetComponentInChildren<GizmoAttackController>();
     }
@@ -56,13 +58,10 @@ public class GizmoMovementController : MonoBehaviour
         // Keyboard movement
         movementInput = gizmoActions.GizmoMap.Movement.ReadValue<Vector3>();
 
-        // Movement angle based on camera position
-        int angle = movementAngles[cameraPositionController.currentCameraPostion];
-
         // Gravity
         var gravity = new Vector3(0, rigidbody.velocity.y + Physics.gravity.y * Time.deltaTime, 0);
 
-        rigidbody.velocity = (Quaternion.AngleAxis(angle, Vector3.up) * movementInput * movementSpeed) + gravity;
+        rigidbody.velocity = (Quaternion.AngleAxis(transform.rotation.eulerAngles.y, Vector3.up) * movementInput * movementSpeed) + gravity;
     }
 
     void jump()

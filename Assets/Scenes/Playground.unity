@@ -332,49 +332,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
+    - target: {fileID: 1867343460439721287, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1e-45
       objectReference: {fileID: 0}
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
+    - target: {fileID: 1867343460439721287, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1e-45
       objectReference: {fileID: 0}
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
+    - target: {fileID: 3346204360420364707, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -1e-45
       objectReference: {fileID: 0}
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564642084526485698, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1638524138796276285, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2133559841632553366, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 3346204360420364707, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 3419680461938966772, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
       propertyPath: m_Name
       value: Gizmo + Camera + HUD
-      objectReference: {fileID: 0}
-    - target: {fileID: 4799292213375242747, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9054684112899266095, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
       propertyPath: m_LocalPosition.x
