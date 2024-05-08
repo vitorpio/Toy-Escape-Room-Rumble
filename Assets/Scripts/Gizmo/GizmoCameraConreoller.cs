@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraPositionController : MonoBehaviour
+public class GizmoCameraConreoller : MonoBehaviour
 {
     private CameraActions cameraActions;
 
@@ -11,12 +11,16 @@ public class CameraPositionController : MonoBehaviour
     private bool cameraCanMove = true;
     private float cameraMoveReleaseTime = 0.1f;
 
-    public GizmoMovementController gizmoMovementController;
-    public GizmoAttackController gizmoAttackController;
-    public Transform gizmoTransform;
+    private GizmoMovementController gizmoMovementController;
+    private GizmoAttackController gizmoAttackController;
+    private Transform transform;
 
     void Awake()
     {
+        gizmoMovementController = GetComponent<GizmoMovementController>();
+        gizmoAttackController = GetComponent<GizmoAttackController>();
+        transform = GetComponent<Transform>();
+
         cameraActions = new CameraActions();
     }
 
@@ -53,7 +57,7 @@ public class CameraPositionController : MonoBehaviour
 
     void updateCameraPosition(int yAxixRotation)
     {
-        gizmoTransform.Rotate(new Vector3(0, yAxixRotation, 0));
+        transform.Rotate(new Vector3(0, yAxixRotation, 0));
         cameraCanMove = false;
         Invoke("releaseCameraMovement", cameraMoveReleaseTime);
         // gizmoAttackController.updateAttackBoxPosition(gizmoTransform.rotation);

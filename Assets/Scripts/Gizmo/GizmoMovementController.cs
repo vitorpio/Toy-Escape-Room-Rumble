@@ -9,7 +9,6 @@ public class GizmoMovementController : MonoBehaviour
     private Transform transform;
     private GizmoActions gizmoActions;
     private Vector3 movementInput;
-    private CameraPositionController cameraPositionController;
     private GizmoAttackController gizmoAttackController;
 
     private int[] movementAngles = {
@@ -30,7 +29,6 @@ public class GizmoMovementController : MonoBehaviour
         gizmoActions = new GizmoActions();
         rigidbody = GetComponent<Rigidbody>();
         transform = GetComponent<Transform>();
-        cameraPositionController = camera.GetComponent<CameraPositionController>();
         gizmoAttackController = GetComponentInChildren<GizmoAttackController>();
     }
 
