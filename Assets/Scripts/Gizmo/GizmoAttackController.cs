@@ -5,21 +5,24 @@ using UnityEngine;
 public class GizmoAttackController : MonoBehaviour
 {
     private GizmoActions gizmoActions;
-    private BoxCollider boxCollider;
+    private GizmoAnimationController gizmoAnimationController;
+    private GizmoMovementController gizmoMovementController;
 
+    private BoxCollider boxCollider;
     private Vector3[] attackBoxPositions = {
         new(0, 0.4f, 1.25f),
         new(1.25f, 0.4f, 0),
         new(0, 0.4f, -1.25f),
         new(-1.25f, 0.4f, 0),
     };
-    private float attackReleaseTime = 1f;
 
     public bool isAttacking = false;
 
     void Awake()
     {
         gizmoActions = new GizmoActions();
+        gizmoAnimationController = GetComponentInParent<GizmoAnimationController>();
+        gizmoMovementController = GetComponentInParent<GizmoMovementController>();
         boxCollider = GetComponent<BoxCollider>();
     }
 
@@ -41,16 +44,11 @@ public class GizmoAttackController : MonoBehaviour
 
     void attack()
     {
-        if (gizmoActions.GizmoMap.Attack.ReadValue<float>() == 1.0f)
+        if (gizmoActions.GizmoMap.Attack.ReadValue<float>() == 1.0f && !isAttacking && !gizmoMovementController.isJumping)
         {
             isAttacking = true;
-            Invoke("releaseAttack", attackReleaseTime);
+            gizmoAnimationController.Attack();
         }
-    }
-
-    void releaseAttack()
-    {
-        isAttacking = false;
     }
 
 

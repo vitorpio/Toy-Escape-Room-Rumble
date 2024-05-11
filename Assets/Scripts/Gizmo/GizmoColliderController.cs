@@ -5,10 +5,12 @@ using UnityEngine;
 public class GizmoColliderController : MonoBehaviour
 {
     GizmoMovementController gizmoMovementController;
+    GizmoAnimationController gizmoAnimationController;
 
     void Awake()
     {
         gizmoMovementController = GetComponent<GizmoMovementController>();
+        gizmoAnimationController = GetComponent<GizmoAnimationController>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -16,6 +18,7 @@ public class GizmoColliderController : MonoBehaviour
         if (collision.gameObject.tag == "Floor" && gizmoMovementController.isJumping)
         {
             gizmoMovementController.isJumping = false;
+            gizmoAnimationController.UpdateJumping(gizmoMovementController.isJumping);
         }
     }
 
