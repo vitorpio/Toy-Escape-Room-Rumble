@@ -10,13 +10,8 @@ public class GizmoMovementController : MonoBehaviour
     private GizmoActions gizmoActions;
     private Vector3 movementInput;
     private GizmoAttackController gizmoAttackController;
+    private GizmoAnimationController gizmoAnimationController;
 
-    private int[] movementAngles = {
-        0,
-        90,
-        180,
-        -90
-    };
     private float movementSpeed = 10.0f;
     private float jumpForce = 60.0f;
 
@@ -30,6 +25,7 @@ public class GizmoMovementController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         transform = GetComponent<Transform>();
         gizmoAttackController = GetComponentInChildren<GizmoAttackController>();
+        gizmoAnimationController = GetComponentInChildren<GizmoAnimationController>();
     }
 
     void OnEnable()
@@ -55,6 +51,9 @@ public class GizmoMovementController : MonoBehaviour
     {
         // Keyboard movement
         movementInput = gizmoActions.GizmoMap.Movement.ReadValue<Vector3>();
+
+        Debug.Log(movementInput);
+        gizmoAnimationController.UpdateMoving(movementInput != Vector3.zero);
 
         // Gravity
         var gravity = new Vector3(0, rigidbody.velocity.y + Physics.gravity.y * Time.deltaTime, 0);
