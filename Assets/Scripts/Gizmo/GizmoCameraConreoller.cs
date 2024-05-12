@@ -9,7 +9,7 @@ public class GizmoCameraConreoller : MonoBehaviour
     private float previousPressed = 0.0f;
     private float nextPressed = 0.0f;
     private bool cameraCanMove = true;
-    private float cameraMoveReleaseTime = 0.1f;
+    private float cameraMoveReleaseTime = 0.5f;
 
     private GizmoMovementController gizmoMovementController;
     private GizmoAttackController gizmoAttackController;
@@ -39,7 +39,7 @@ public class GizmoCameraConreoller : MonoBehaviour
     {
 
         // Camera Movement
-        if (cameraCanMove && !gizmoMovementController.isJumping)
+        if (cameraCanMove && !gizmoMovementController.isJumping && !gizmoAttackController.isAttacking)
         {
             previousPressed = cameraActions.CameraMap.Previous.ReadValue<float>();
             nextPressed = cameraActions.CameraMap.Next.ReadValue<float>();
