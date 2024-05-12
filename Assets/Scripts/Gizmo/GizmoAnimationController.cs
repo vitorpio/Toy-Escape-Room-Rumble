@@ -12,7 +12,7 @@ public class GizmoAnimationController : MonoBehaviour
 
     private AnimationClip attackAnimationClip;
     private GizmoAttackController gizmoAttackController;
-    private string attackAnimationClipName = "Armature|Attacking";
+    private string attackAnimationClipName = "Armature|new_attacking";
 
 
     void Awake()
