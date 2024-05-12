@@ -54,7 +54,7 @@ public class BatteryController : MonoBehaviour
         currentBattery--;
         if (currentBattery < 0)
         {
-            gizmosStatusController.Die();
+            // gizmosStatusController.Die();
         }
         else
         {
