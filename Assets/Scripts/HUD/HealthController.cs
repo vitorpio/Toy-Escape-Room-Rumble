@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    public GameObject[] gears;
+    private int maxHealth = 3;
+    private int minHealth = 1;
 
-    public void UpdateHealth(int health)
+    public GameObject[] gears;
+    public int health = 3;
+
+    void UpdateHealth(int health)
     {
         for (int i = 0; i < gears.Length; i++)
         {
@@ -18,6 +22,28 @@ public class HealthController : MonoBehaviour
             {
                 gears[i].SetActive(false);
             }
+        }
+    }
+
+    public void TakeDamage()
+    {
+        if (health == minHealth)
+        {
+            // Die();
+        }
+        else
+        {
+            health -= 1;
+            UpdateHealth(health);
+        }
+    }
+
+    public void Heal()
+    {
+        if (health != maxHealth)
+        {
+            health += 1;
+            UpdateHealth(health);
         }
     }
 }
