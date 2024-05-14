@@ -14,7 +14,6 @@ public class BatteryController : MonoBehaviour
 
     public int currentBattery;
     public List<Sprite> batterySprites;
-    public GizmosStatusController gizmosStatusController;
 
 
     void Awake()
@@ -26,8 +25,11 @@ public class BatteryController : MonoBehaviour
 
     public void Recharge()
     {
-        currentBattery += 1;
-        image.sprite = batterySprites[currentBattery];
+        if (currentBattery < maxBattery)
+        {
+            currentBattery += 1;
+            image.sprite = batterySprites[currentBattery];
+        }
         StartBatteryReduce();
     }
 
