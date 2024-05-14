@@ -191,6 +191,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &244628587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216735538692973710, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+  m_PrefabInstance: {fileID: 1429669396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &244628592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244628587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &573683413
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +350,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1307185811102429305, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      propertyPath: isJumping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1867343460439721287, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
       propertyPath: m_LocalRotation.y
       value: -1e-45
@@ -395,8 +417,45 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1216735538692973710, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 244628592}
+    - targetCorrespondingSourceObject: {fileID: 8714799560998417848, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1429669398}
   m_SourcePrefab: {fileID: 100100000, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+--- !u!1 &1429669397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8714799560998417848, guid: 0ff206e7450b5a7848b95a3bdd07a9f1, type: 3}
+  m_PrefabInstance: {fileID: 1429669396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1429669398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429669397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5904029d55576bcb71f3edb62b9afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iddleSound:
+    Guid:
+      Data1: -325847507
+      Data2: 1158756604
+      Data3: 1104503686
+      Data4: 797340095
+    Path: event:/sfx_gizmo_iddle
+  moveSound:
+    Guid:
+      Data1: -770440251
+      Data2: 1253209864
+      Data3: -1104228696
+      Data4: 1218862984
+    Path: event:/sfx_gizmo_movement
 --- !u!1 &1752764911
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class GizmoMovementController : MonoBehaviour
     private Vector3 movementInput;
     private GizmoAttackController gizmoAttackController;
     private GizmoAnimationController gizmoAnimationController;
+    private GizmoSoundController gizmoSoundController;
 
     private float movementSpeed = 10.0f;
     private float jumpForce = 60.0f;
@@ -27,6 +28,7 @@ public class GizmoMovementController : MonoBehaviour
         transform = GetComponent<Transform>();
         gizmoAttackController = GetComponentInChildren<GizmoAttackController>();
         gizmoAnimationController = GetComponentInChildren<GizmoAnimationController>();
+        gizmoSoundController = GetComponent<GizmoSoundController>();
     }
 
     void OnEnable()
@@ -50,15 +52,23 @@ public class GizmoMovementController : MonoBehaviour
 
     void move()
     {
-        // Keyboard movement
-        movementInput = gizmoActions.GizmoMap.Movement.ReadValue<Vector3>();
-
-        isMoving = movementInput != Vector3.zero;
-        gizmoAnimationController.UpdateMoving(isMoving);
-
+        // Check if Gizmo is Attacking
         if (gizmoAttackController.isAttacking)
         {
             return;
+        }
+
+        // Keyboard movement
+        movementInput = gizmoActions.GizmoMap.Movement.ReadValue<Vector3>();
+
+        bool wasMoving = isMoving;
+        isMoving = movementInput != Vector3.zero;
+
+        // Started Moving or Stoped
+        if (wasMoving != isMoving)
+        {
+            gizmoAnimationController.UpdateMoving(isMoving);
+            gizmoSoundController.MovedOrStopped(isMoving);
         }
 
         // Gravity
