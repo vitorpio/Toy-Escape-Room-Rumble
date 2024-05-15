@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5627736624023616128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_battery_charge
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_battery_charge
+  Guid:
+    Data1: -283283200
+    Data2: 1264548864
+    Data3: -2091020124
+    Data4: 1070280475
+  Banks:
+  - {fileID: 9063696833742083451}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 720
 --- !u!114 &-4100617428663264750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,7 +80,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4496
+  Length: 7300
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,13 +100,42 @@ MonoBehaviour:
   - {fileID: -3517792863556315486}
   - {fileID: -4100617428663264750}
   - {fileID: 2942315679283116377}
+  - {fileID: -5627736624023616128}
+  - {fileID: 453229229461613422}
   EditorParameters: []
   MasterBanks:
   - {fileID: 9063696833742083451}
   StringsBanks:
   - {fileID: 3794006744312156277}
-  cacheTime: 638513157585781881
+  cacheTime: 638513200926118171
   cacheVersion: 131617
+--- !u!114 &453229229461613422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_gear
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_gear
+  Guid:
+    Data1: -584732302
+    Data2: 1311267607
+    Data3: 1308130223
+    Data4: -1043747180
+  Banks:
+  - {fileID: 9063696833742083451}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 444
 --- !u!114 &2942315679283116377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,10 +178,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638513157585781881
+  lastModified: 638513200926118171
   FileSizes:
   - Name: 
-    Value: 870
+    Value: 972
   Exists: 1
 --- !u!114 &9063696833742083451
 MonoBehaviour:
@@ -142,6 +198,6 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638513157585781881
+  lastModified: 638513200926068160
   FileSizes: []
   Exists: 1
