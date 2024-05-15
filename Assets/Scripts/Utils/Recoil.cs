@@ -7,9 +7,9 @@ public static class Recoil
     {
         Transform transform1 = takeRecoil.GetComponent<Transform>();
         Transform transform2 = applyRecoil.GetComponent<Transform>();
-        Rigidbody rb = takeRecoil.GetComponent<Rigidbody2D>();
+        Rigidbody rb = takeRecoil.GetComponent<Rigidbody>();
 
-        Vector3 vectorForce = (transform1.position - transform2.position) * recoilForce;
+        Vector3 vectorForce = new Vector3(transform1.position.x - transform2.position.x, 0, transform1.position.z - transform2.position.z) * recoilForce;
         rb.AddForce(vectorForce, ForceMode.Impulse);
     }
 }
