@@ -80,7 +80,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 7300
+  Length: 6500
 --- !u!114 &-2930927009957293947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   - {fileID: 9063696833742083451}
   StringsBanks:
   - {fileID: 3794006744312156277}
-  cacheTime: 638513215996411026
+  cacheTime: 638513233714310420
   cacheVersion: 131617
 --- !u!114 &453229229461613422
 MonoBehaviour:
@@ -206,7 +206,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638513215996411026
+  lastModified: 638513233714310420
   FileSizes:
   - Name: 
     Value: 1010
@@ -226,6 +226,6 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638513215996351005
+  lastModified: 638513233714260427
   FileSizes: []
   Exists: 1
