@@ -9,7 +9,7 @@ public class GizmoCameraConreoller : MonoBehaviour
     private float previousPressed = 0.0f;
     private float nextPressed = 0.0f;
     private bool cameraCanMove = true;
-    private float cameraMoveReleaseTime = 0.5f;
+    private float cameraMoveReleaseTime = 0.001f;
 
     private GizmoMovementController gizmoMovementController;
     private GizmoAttackController gizmoAttackController;
@@ -46,11 +46,11 @@ public class GizmoCameraConreoller : MonoBehaviour
 
             if (previousPressed == 1.0f)
             {
-                updateCameraPosition(-90);
+                updateCameraPosition(-1);
             }
             else if (nextPressed == 1.0f)
             {
-                updateCameraPosition(90);
+                updateCameraPosition(1);
             }
         }
     }
@@ -60,7 +60,6 @@ public class GizmoCameraConreoller : MonoBehaviour
         transform.Rotate(new Vector3(0, yAxixRotation, 0));
         cameraCanMove = false;
         Invoke("releaseCameraMovement", cameraMoveReleaseTime);
-        // gizmoAttackController.updateAttackBoxPosition(gizmoTransform.rotation);
     }
 
     void releaseCameraMovement()

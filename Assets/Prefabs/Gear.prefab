@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5876823986068792337}
   - component: {fileID: 996096838443354292}
   - component: {fileID: 3280363591774410819}
+  - component: {fileID: 4711669428513872783}
   m_Layer: 0
   m_Name: Gear
   m_TagString: Gear
@@ -67,6 +68,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14b49ea6fe06c1efa1606334e0b18d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4711669428513872783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444537643700998603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -584732302
+      Data2: 1311267607
+      Data3: 1308130223
+      Data4: -1043747180
+    Path: event:/sfx_gear
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &2284317715606770091
 PrefabInstance:
   m_ObjectHideFlags: 0
