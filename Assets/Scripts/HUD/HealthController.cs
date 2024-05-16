@@ -27,15 +27,9 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage()
     {
-        if (health == minHealth)
-        {
-            // Die();
-        }
-        else
-        {
-            health -= 1;
-            UpdateHealth(health);
-        }
+        health -= 1;
+        UpdateHealth(health);
+
     }
 
     public void Heal()
