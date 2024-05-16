@@ -16,7 +16,7 @@ public class GizmoMovementController : MonoBehaviour
     private float movementSpeed = 10.0f;
     private float jumpForce = 60.0f;
 
-    public CinemachineVirtualCamera camera;
+    public HealthController healthController;
     public bool isJumping = false;
     public bool isMoving = false;
 
@@ -53,7 +53,7 @@ public class GizmoMovementController : MonoBehaviour
     void move()
     {
         // Check if Gizmo is Attacking
-        if (gizmoAttackController.isAttacking)
+        if (gizmoAttackController.isAttacking || healthController.isTakingDamage)
         {
             return;
         }
@@ -79,6 +79,11 @@ public class GizmoMovementController : MonoBehaviour
 
     void jump()
     {
+        if (healthController.isTakingDamage)
+        {
+            return;
+        }
+
         if (gizmoActions.GizmoMap.Jump.ReadValue<float>() == 1.0f && !isJumping && !gizmoAttackController.isAttacking)
         {
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);

@@ -7,6 +7,7 @@ public class GizmoColliderController : MonoBehaviour
     private GizmoMovementController gizmoMovementController;
     private GizmoAnimationController gizmoAnimationController;
     private GizmoSoundController gizmoSoundController;
+    private float enemyRecoilForce = 20.0f;
 
     public HealthController healthController;
     public BatteryController batteryController;
@@ -29,7 +30,7 @@ public class GizmoColliderController : MonoBehaviour
         {
             healthController.TakeDamage();
             gizmoSoundController.TakeDamage();
-            Recoil.ApplyRecoil(gameObject, collision.gameObject, 50.0f);
+            Recoil.ApplyRecoil(gameObject, collision.gameObject, enemyRecoilForce);
         }
     }
 

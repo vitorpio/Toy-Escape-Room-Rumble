@@ -6,9 +6,12 @@ public class HealthController : MonoBehaviour
 {
     private int maxHealth = 3;
     private int minHealth = 1;
+    private int takeDamageReleaseTime = 1;
 
     public GameObject[] gears;
     public int health = 3;
+
+    public bool isTakingDamage = false;
 
     void UpdateHealth(int health)
     {
@@ -27,9 +30,17 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage()
     {
-        health -= 1;
-        UpdateHealth(health);
+        if (health == minHealth)
+        {
 
+        }
+        else
+        {
+            isTakingDamage = true;
+            health -= 1;
+            UpdateHealth(health);
+            Invoke("releaseTakeDamage", takeDamageReleaseTime);
+        }
     }
 
     public void Heal()
@@ -39,5 +50,10 @@ public class HealthController : MonoBehaviour
             health += 1;
             UpdateHealth(health);
         }
+    }
+
+    private void releaseTakeDamage()
+    {
+        isTakingDamage = false;
     }
 }
