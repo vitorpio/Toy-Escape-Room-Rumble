@@ -65,7 +65,7 @@ public class GizmoMovementController : MonoBehaviour
         isMoving = movementInput != Vector3.zero;
 
         // Started Moving or Stoped
-        if (wasMoving != isMoving)
+        if (wasMoving != isMoving && !isJumping)
         {
             gizmoAnimationController.UpdateMoving(isMoving);
             gizmoSoundController.MovedOrStopped(isMoving);
@@ -84,6 +84,7 @@ public class GizmoMovementController : MonoBehaviour
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isJumping = true;
             gizmoAnimationController.UpdateJumping(isJumping);
+            gizmoSoundController.jump();
         }
     }
 

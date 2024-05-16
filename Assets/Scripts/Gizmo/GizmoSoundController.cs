@@ -10,17 +10,20 @@ public class GizmoSoundController : MonoBehaviour
     public EventReference iddleSound;
     public EventReference moveSound;
     public EventReference takeDamageSound;
+    public EventReference jumpSound;
 
 
     private EventInstance iddleSoundInstance;
     private EventInstance moveSoundInstance;
     private EventInstance takeDamageSoundInstance;
+    private EventInstance jumpSoundInstance;
 
     void Awake()
     {
         iddleSoundInstance = RuntimeManager.CreateInstance(iddleSound);
         moveSoundInstance = RuntimeManager.CreateInstance(moveSound);
         takeDamageSoundInstance = RuntimeManager.CreateInstance(takeDamageSound);
+        jumpSoundInstance = RuntimeManager.CreateInstance(jumpSound);
 
         MovedOrStopped(false);
     }
@@ -44,11 +47,18 @@ public class GizmoSoundController : MonoBehaviour
         takeDamageSoundInstance.start();
     }
 
+    public void jump()
+    {
+        stopAllSounds();
+        jumpSoundInstance.start();
+    }
+
     public void stopAllSounds()
     {
         iddleSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         moveSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         takeDamageSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        jumpSoundInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 
 }
