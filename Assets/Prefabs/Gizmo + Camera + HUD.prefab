@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 6087546605501023863}
   - component: {fileID: 2752557707371526042}
   - component: {fileID: 4443644168358716079}
+  - component: {fileID: 1791689839612118062}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -221,6 +222,19 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1791689839612118062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216735538692973710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &3164078417244896577
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +612,7 @@ GameObject:
   - component: {fileID: 4599596088966823056}
   - component: {fileID: 5846371906462457152}
   - component: {fileID: 1307185811102429305}
+  - component: {fileID: 7606509437445695573}
   m_Layer: 0
   m_Name: Gizmo
   m_TagString: Untagged
@@ -733,8 +748,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  isJumping: 0
+  isJumping: 1
   isMoving: 0
+--- !u!114 &7606509437445695573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8714799560998417848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5904029d55576bcb71f3edb62b9afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iddleSound:
+    Guid:
+      Data1: -325847507
+      Data2: 1158756604
+      Data3: 1104503686
+      Data4: 797340095
+    Path: event:/sfx_gizmo_iddle
+  moveSound:
+    Guid:
+      Data1: -770440251
+      Data2: 1253209864
+      Data3: -1104228696
+      Data4: 1218862984
+    Path: event:/sfx_gizmo_movement
 --- !u!1001 &1730431310436060164
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5627736624023616128
+--- !u!114 &-4961752233948717737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: -2091020124
     Data4: 1070280475
   Banks:
-  - {fileID: 9063696833742083451}
+  - {fileID: -2578437790071359138}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -27,171 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 720
---- !u!114 &-4100617428663264750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_gizmo_movement
-  m_EditorClassIdentifier: 
-  Path: event:/sfx_gizmo_movement
-  Guid:
-    Data1: -770440251
-    Data2: 1253209864
-    Data3: -1104228696
-    Data4: 1218862984
-  Banks:
-  - {fileID: 9063696833742083451}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 8568
---- !u!114 &-3517792863556315486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_gizmo_iddle
-  m_EditorClassIdentifier: 
-  Path: event:/sfx_gizmo_iddle
-  Guid:
-    Data1: -325847507
-    Data2: 1158756604
-    Data3: 1104503686
-    Data4: 797340095
-  Banks:
-  - {fileID: 9063696833742083451}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 6500
---- !u!114 &-2930927009957293947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_damage
-  m_EditorClassIdentifier: 
-  Path: event:/sfx_damage
-  Guid:
-    Data1: 229001676
-    Data2: 1233402521
-    Data3: 497181855
-    Data4: -293927850
-  Banks:
-  - {fileID: 9063696833742083451}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 490
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 3794006744312156277}
-  - {fileID: 9063696833742083451}
-  EditorEvents:
-  - {fileID: -3517792863556315486}
-  - {fileID: -4100617428663264750}
-  - {fileID: 2942315679283116377}
-  - {fileID: -5627736624023616128}
-  - {fileID: 453229229461613422}
-  - {fileID: -2930927009957293947}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 9063696833742083451}
-  StringsBanks:
-  - {fileID: 3794006744312156277}
-  cacheTime: 638513233714310420
-  cacheVersion: 131617
---- !u!114 &453229229461613422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/sfx_gear
-  m_EditorClassIdentifier: 
-  Path: event:/sfx_gear
-  Guid:
-    Data1: -584732302
-    Data2: 1311267607
-    Data3: 1308130223
-    Data4: -1043747180
-  Banks:
-  - {fileID: 9063696833742083451}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 444
---- !u!114 &2942315679283116377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/music_theme
-  m_EditorClassIdentifier: 
-  Path: event:/music_theme
-  Guid:
-    Data1: 307516852
-    Data2: 1279216732
-    Data3: 896826509
-    Data4: 324553895
-  Banks:
-  - {fileID: 9063696833742083451}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 133923
---- !u!114 &3794006744312156277
+--- !u!114 &-3565435474792324805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,7 +47,7 @@ MonoBehaviour:
   - Name: 
     Value: 1010
   Exists: 1
---- !u!114 &9063696833742083451
+--- !u!114 &-2578437790071359138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,3 +65,167 @@ MonoBehaviour:
   lastModified: 638513233714260427
   FileSizes: []
   Exists: 1
+--- !u!114 &-2043992477298515682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_gear
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_gear
+  Guid:
+    Data1: -584732302
+    Data2: 1311267607
+    Data3: 1308130223
+    Data4: -1043747180
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 444
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3565435474792324805}
+  - {fileID: -2578437790071359138}
+  EditorEvents:
+  - {fileID: -4961752233948717737}
+  - {fileID: 8887647666806594350}
+  - {fileID: -2043992477298515682}
+  - {fileID: 9032568136225578377}
+  - {fileID: 3333937047206432296}
+  - {fileID: 1899279515240223975}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -2578437790071359138}
+  StringsBanks:
+  - {fileID: -3565435474792324805}
+  cacheTime: 638513233714310420
+  cacheVersion: 131617
+--- !u!114 &1899279515240223975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_damage
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_damage
+  Guid:
+    Data1: 229001676
+    Data2: 1233402521
+    Data3: 497181855
+    Data4: -293927850
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 490
+--- !u!114 &3333937047206432296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_gizmo_movement
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_gizmo_movement
+  Guid:
+    Data1: -770440251
+    Data2: 1253209864
+    Data3: -1104228696
+    Data4: 1218862984
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8568
+--- !u!114 &8887647666806594350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_gizmo_iddle
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_gizmo_iddle
+  Guid:
+    Data1: -325847507
+    Data2: 1158756604
+    Data3: 1104503686
+    Data4: 797340095
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6500
+--- !u!114 &9032568136225578377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/music_theme
+  m_EditorClassIdentifier: 
+  Path: event:/music_theme
+  Guid:
+    Data1: 307516852
+    Data2: 1279216732
+    Data3: 896826509
+    Data4: 324553895
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 133923

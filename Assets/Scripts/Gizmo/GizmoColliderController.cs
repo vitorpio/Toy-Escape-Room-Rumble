@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class GizmoColliderController : MonoBehaviour
 {
-    GizmoMovementController gizmoMovementController;
-    GizmoAnimationController gizmoAnimationController;
+    private GizmoMovementController gizmoMovementController;
+    private GizmoAnimationController gizmoAnimationController;
+    private GizmoSoundController gizmoSoundController;
+
     public HealthController healthController;
     public BatteryController batteryController;
 
@@ -13,6 +15,7 @@ public class GizmoColliderController : MonoBehaviour
     {
         gizmoMovementController = GetComponent<GizmoMovementController>();
         gizmoAnimationController = GetComponent<GizmoAnimationController>();
+        gizmoSoundController = GetComponent<GizmoSoundController>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -21,6 +24,12 @@ public class GizmoColliderController : MonoBehaviour
         {
             gizmoMovementController.isJumping = false;
             gizmoAnimationController.UpdateJumping(gizmoMovementController.isJumping);
+        }
+        else if (collision.gameObject.tag == "Enemy")
+        {
+            healthController.TakeDamage();
+            gizmoSoundController.TakeDamage();
+            Recoil.ApplyRecoil(gameObject, collision.gameObject, 50.0f);
         }
     }
 
