@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 720
+--- !u!114 &-4546014794050149390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_gizmo_jump
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_gizmo_jump
+  Guid:
+    Data1: -1940924908
+    Data2: 1101691449
+    Data3: -1616738638
+    Data4: 956996549
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3000
 --- !u!114 &-3565435474792324805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +69,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638513233714310420
+  lastModified: 638514852661563002
   FileSizes:
   - Name: 
-    Value: 1010
+    Value: 1044
   Exists: 1
 --- !u!114 &-2578437790071359138
 MonoBehaviour:
@@ -62,7 +89,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638513233714260427
+  lastModified: 638514852661512995
   FileSizes: []
   Exists: 1
 --- !u!114 &-2043992477298515682
@@ -114,12 +141,13 @@ MonoBehaviour:
   - {fileID: 9032568136225578377}
   - {fileID: 3333937047206432296}
   - {fileID: 1899279515240223975}
+  - {fileID: -4546014794050149390}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2578437790071359138}
   StringsBanks:
   - {fileID: -3565435474792324805}
-  cacheTime: 638513233714310420
+  cacheTime: 638514852661563002
   cacheVersion: 131617
 --- !u!114 &1899279515240223975
 MonoBehaviour:
