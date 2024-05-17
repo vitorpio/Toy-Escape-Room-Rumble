@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour
 {
     private int maxHealth = 3;
     private int minHealth = 1;
     private int takeDamageReleaseTime = 1;
-    private GameObject gizmo;
 
+    public BatteryController batteryController;
     public GameObject Spawn;
     public GameObject Gizmo;
     public GameObject[] gears;
@@ -69,8 +70,7 @@ public class HealthController : MonoBehaviour
 
     public void Respawn()
     {
-        Gizmo.transform.position = Spawn.transform.position;
-        health = maxHealth;
-        UpdateHealth();
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
     }
 }

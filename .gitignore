@@ -73,3 +73,7 @@ crashlytics-build.properties
 
 # vscode
 .vscode
+ 
+# FMOD
+
+fmod_editor.log

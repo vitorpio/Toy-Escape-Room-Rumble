@@ -94,6 +94,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9fd7b02fcd71963bab2cf8f4f8d96c17, type: 3}
   - {fileID: 21300000, guid: bf2cb88d1c9f7a32d937a0216feb5675, type: 3}
   - {fileID: 21300000, guid: bf23f71d4e0ba0dc386afdc806b2736f, type: 3}
+  healthController: {fileID: 3434207102534939260}
 --- !u!1 &1216735538692973710
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 1216735538692973710}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22975291, y: -0.0000000187227, z: 0.0000000044198294, w: 0.973249}
-  m_LocalPosition: {x: 1.3100014, y: 8.5273, z: -20.951157}
+  m_LocalPosition: {x: 1.31, y: 8.5273, z: -20.951157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -261,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 3164078417244896577}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22975291, y: -0.0000000187227, z: 0.0000000044198294, w: 0.973249}
-  m_LocalPosition: {x: 1.3100014, y: 8.5273, z: -20.951157}
+  m_LocalPosition: {x: 1.31, y: 8.5273, z: -20.951157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -393,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d7b53f8edec376a8039a25a5f76d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryController: {fileID: 4149650099407159025}
   Spawn: {fileID: 0}
   Gizmo: {fileID: 8714799560998417848}
   gears:
@@ -618,7 +620,7 @@ GameObject:
   - component: {fileID: 7606509437445695573}
   m_Layer: 0
   m_Name: Gizmo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

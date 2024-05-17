@@ -7,7 +7,11 @@ public class GizmoColliderController : MonoBehaviour
     private GizmoMovementController gizmoMovementController;
     private GizmoAnimationController gizmoAnimationController;
     private GizmoSoundController gizmoSoundController;
+    private GizmoAttackController gizmoAttackController;
     private float enemyRecoilForce = 20.0f;
+
+    private int kitesCollected = 0;
+    private int totalKites = 3;
 
     public HealthController healthController;
     public BatteryController batteryController;
@@ -17,6 +21,7 @@ public class GizmoColliderController : MonoBehaviour
         gizmoMovementController = GetComponent<GizmoMovementController>();
         gizmoAnimationController = GetComponent<GizmoAnimationController>();
         gizmoSoundController = GetComponent<GizmoSoundController>();
+        gizmoAttackController = GetComponent<GizmoAttackController>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -28,10 +33,17 @@ public class GizmoColliderController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Enemy" && !healthController.isTakingDamage)
         {
-            gizmoSoundController.TakeDamage();
-            if (healthController.TakeDamage())
+            if (gizmoAttackController.isAttacking)
             {
-                Recoil.ApplyRecoil(gameObject, collision.gameObject, enemyRecoilForce);
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                gizmoSoundController.TakeDamage();
+                if (healthController.TakeDamage())
+                {
+                    Recoil.ApplyRecoil(gameObject, collision.gameObject, enemyRecoilForce);
+                }
             }
         }
     }
@@ -47,6 +59,15 @@ public class GizmoColliderController : MonoBehaviour
         {
             batteryController.Recharge();
             Destroy(other.gameObject);
+        }
+        else if (other.tag == "Kite")
+        {
+            kitesCollected += 1;
+            Destroy(other.gameObject);
+            if (kitesCollected == totalKites)
+            {
+                healthController.Respawn();
+            }
         }
 
     }

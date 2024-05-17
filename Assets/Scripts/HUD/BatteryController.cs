@@ -14,6 +14,7 @@ public class BatteryController : MonoBehaviour
 
     public int currentBattery;
     public List<Sprite> batterySprites;
+    public HealthController healthController;
 
 
     void Awake()
@@ -56,7 +57,7 @@ public class BatteryController : MonoBehaviour
         currentBattery--;
         if (currentBattery < 0)
         {
-            // gizmosStatusController.Die();
+            healthController.Respawn();
         }
         else
         {

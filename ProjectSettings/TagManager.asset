@@ -9,6 +9,7 @@ TagManager:
   - Battery
   - Enemy
   - Spawn
+  - Kite
   layers:
   - Default
   - TransparentFX
