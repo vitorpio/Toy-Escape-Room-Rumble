@@ -7,6 +7,7 @@ public class GizmoAttackController : MonoBehaviour
     private GizmoActions gizmoActions;
     private GizmoAnimationController gizmoAnimationController;
     private GizmoMovementController gizmoMovementController;
+    private GizmoSoundController gizmoSoundController;
     private Rigidbody rigidbody;
     private Transform transform;
     private float attackForce = 50.0f;
@@ -18,6 +19,7 @@ public class GizmoAttackController : MonoBehaviour
         gizmoActions = new GizmoActions();
         gizmoAnimationController = GetComponent<GizmoAnimationController>();
         gizmoMovementController = GetComponent<GizmoMovementController>();
+        gizmoSoundController = GetComponent<GizmoSoundController>();
         rigidbody = GetComponent<Rigidbody>();
         transform = GetComponent<Transform>();
     }
@@ -46,6 +48,7 @@ public class GizmoAttackController : MonoBehaviour
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(Quaternion.AngleAxis(transform.rotation.eulerAngles.y, Vector3.up) * Vector3.forward * attackForce, ForceMode.Impulse);
             gizmoAnimationController.Attack();
+            gizmoSoundController.Attack();
         }
     }
 }

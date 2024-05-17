@@ -123,7 +123,7 @@ Transform:
   m_GameObject: {fileID: 1216735538692973710}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22975291, y: -0.0000000187227, z: 0.0000000044198294, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 10, z: -20}
+  m_LocalPosition: {x: 1.3100014, y: 8.5273, z: -20.951157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -261,7 +261,7 @@ Transform:
   m_GameObject: {fileID: 3164078417244896577}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22975291, y: -0.0000000187227, z: 0.0000000044198294, w: 0.973249}
-  m_LocalPosition: {x: 0, y: 10, z: -20}
+  m_LocalPosition: {x: 1.3100014, y: 8.5273, z: -20.951157}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 9054684112899266095}
   m_Layer: 0
   m_Name: Gizmo + Camera + HUD
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,6 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d7b53f8edec376a8039a25a5f76d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Spawn: {fileID: 0}
+  Gizmo: {fileID: 8714799560998417848}
   gears:
   - {fileID: 2133559841632553366}
   - {fileID: 1638524138796276285}
@@ -630,7 +632,7 @@ Transform:
   m_GameObject: {fileID: 8714799560998417848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.31, y: -1.4726996, z: -0.9511566}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -791,6 +793,13 @@ MonoBehaviour:
       Data3: -1616738638
       Data4: 956996549
     Path: event:/sfx_gizmo_jump
+  attackSound:
+    Guid:
+      Data1: -53166668
+      Data2: 1182027979
+      Data3: -893415504
+      Data4: -1770171911
+    Path: event:/sfx_gizmo_attack
 --- !u!1001 &1730431310436060164
 PrefabInstance:
   m_ObjectHideFlags: 0

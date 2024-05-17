@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GizmoMovementController : MonoBehaviour
@@ -89,7 +90,7 @@ public class GizmoMovementController : MonoBehaviour
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isJumping = true;
             gizmoAnimationController.UpdateJumping(isJumping);
-            gizmoSoundController.jump();
+            gizmoSoundController.Jump();
         }
     }
 

@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638514936642322699
+  lastModified: 638514943369039519
   FileSizes:
   - Name: 
     Value: 1082
@@ -89,7 +89,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638514936642252675
+  lastModified: 638514943369039519
   FileSizes: []
   Exists: 1
 --- !u!114 &-2043992477298515682
@@ -142,13 +142,13 @@ MonoBehaviour:
   - {fileID: 3333937047206432296}
   - {fileID: 1899279515240223975}
   - {fileID: -4546014794050149390}
-  - {fileID: 4823701474991546064}
+  - {fileID: 7920709245420183722}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2578437790071359138}
   StringsBanks:
   - {fileID: -3565435474792324805}
-  cacheTime: 638514936642322699
+  cacheTime: 638514943369039519
   cacheVersion: 131617
 --- !u!114 &1899279515240223975
 MonoBehaviour:
@@ -205,6 +205,33 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 8568
 --- !u!114 &4823701474991546064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_gizmo_attack
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_gizmo_attack
+  Guid:
+    Data1: -53166668
+    Data2: 1182027979
+    Data3: -893415504
+    Data4: -1770171911
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 700
+--- !u!114 &7920709245420183722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

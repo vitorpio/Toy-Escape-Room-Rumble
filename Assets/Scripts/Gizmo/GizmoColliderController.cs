@@ -26,11 +26,13 @@ public class GizmoColliderController : MonoBehaviour
             gizmoMovementController.isJumping = false;
             gizmoAnimationController.UpdateJumping(gizmoMovementController.isJumping);
         }
-        else if (collision.gameObject.tag == "Enemy")
+        else if (collision.gameObject.tag == "Enemy" && !healthController.isTakingDamage)
         {
-            healthController.TakeDamage();
             gizmoSoundController.TakeDamage();
-            Recoil.ApplyRecoil(gameObject, collision.gameObject, enemyRecoilForce);
+            if (healthController.TakeDamage())
+            {
+                Recoil.ApplyRecoil(gameObject, collision.gameObject, enemyRecoilForce);
+            }
         }
     }
 
