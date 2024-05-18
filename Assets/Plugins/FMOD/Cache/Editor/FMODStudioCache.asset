@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638515845411420934
+  lastModified: 638515850654962790
   FileSizes:
   - Name: 
     Value: 1116
@@ -89,7 +89,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638515845411360918
+  lastModified: 638515850654962790
   FileSizes: []
   Exists: 1
 --- !u!114 &-2043992477298515682
@@ -170,13 +170,13 @@ MonoBehaviour:
   - {fileID: 1899279515240223975}
   - {fileID: -4546014794050149390}
   - {fileID: 7920709245420183722}
-  - {fileID: -475837626729533285}
+  - {fileID: 3715301586457826484}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2578437790071359138}
   StringsBanks:
   - {fileID: -3565435474792324805}
-  cacheTime: 638515845411420934
+  cacheTime: 638515850654962790
   cacheVersion: 131617
 --- !u!114 &1899279515240223975
 MonoBehaviour:
@@ -232,6 +232,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8568
+--- !u!114 &3715301586457826484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/sfx_kite
+  m_EditorClassIdentifier: 
+  Path: event:/sfx_kite
+  Guid:
+    Data1: 510104636
+    Data2: 1183079293
+    Data3: -1939532904
+    Data4: -1500128297
+  Banks:
+  - {fileID: -2578437790071359138}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1300
 --- !u!114 &4823701474991546064
 MonoBehaviour:
   m_ObjectHideFlags: 0

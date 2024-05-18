@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4380468085821456064}
+  - component: {fileID: 1734513863063164306}
+  - component: {fileID: 6618852283658585964}
   m_Layer: 0
   m_Name: Kite
   m_TagString: Kite
@@ -32,6 +34,58 @@ Transform:
   - {fileID: 2764414854062263010}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734513863063164306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131413540368926349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 510104636
+      Data2: 1183079293
+      Data3: -1939532904
+      Data4: -1500128297
+    Path: event:/sfx_kite
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!65 &6618852283658585964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131413540368926349}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.4593709, y: 4.513388, z: 0.23622036}
+  m_Center: {x: -0.0076378584, y: -0.5957482, z: -0.00000047683716}
 --- !u!1001 &5706069568678335500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,7 +100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7072608611137782868, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
       propertyPath: m_TagString
-      value: Kite
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7596768431702859502, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
       propertyPath: m_LocalScale.x
@@ -62,15 +116,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7596768431702859502, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7596768431702859502, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7596768431702859502, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.56
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7596768431702859502, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -103,39 +157,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7072608611137782868, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4254311194218360532}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
 --- !u!4 &2764414854062263010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7596768431702859502, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
   m_PrefabInstance: {fileID: 5706069568678335500}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3249061281050759256 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7072608611137782868, guid: 2aaedb2df996e904cb1aa3ff7d80dc3f, type: 3}
-  m_PrefabInstance: {fileID: 5706069568678335500}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &4254311194218360532
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3249061281050759256}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0069302684, y: 0.45202774, z: 0.35017067}
-  m_Center: {x: -0.00019427719, y: -0.0567998, z: 0.000000059604645}
