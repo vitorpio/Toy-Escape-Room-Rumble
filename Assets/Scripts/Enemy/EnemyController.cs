@@ -6,20 +6,18 @@ public class EnemyController : MonoBehaviour
 {
     private Rigidbody rigidbody;
     private Transform transform;
+    private EnemyFieldOfViewController enemyFieldOfViewController;
 
     public HealthController healthController;
+    public float chaseForce = 50.0f;
+    public float chaseRotation = 3.0f;
 
 
     void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
         transform = GetComponent<Transform>();
-    }
-
-
-    void FixedUpdate()
-    {
-
+        enemyFieldOfViewController = GetComponentInChildren<EnemyFieldOfViewController>();
     }
 
     void OnTriggerStay(Collider other)
@@ -28,11 +26,19 @@ public class EnemyController : MonoBehaviour
         {
             Transform playerTransform = other.gameObject.GetComponent<Transform>();
 
-            Vector3 chaseForce = (playerTransform.position - transform.position) * 50 * Time.deltaTime;
-
-            rigidbody.velocity = chaseForce;
+            if (enemyFieldOfViewController.playerOnFieldOfView)
+            {
+                rigidbody.velocity = (playerTransform.position - transform.position) * chaseForce * Time.deltaTime;
+            }
+            else
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(playerTransform.position - transform.position);
+                targetRotation.x = 0;
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, chaseRotation * Time.deltaTime);
+            }
         }
     }
+
 
     void OnTriggerExit(Collider other)
     {
