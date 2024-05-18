@@ -9,7 +9,7 @@ public class BatteryController : MonoBehaviour
     private Image image;
     private int maxBattery = 3;
     private int minBattery = 0;
-    private int batteryReduceTime = 60;
+    private int batteryReduceTime = 30;
     private IEnumerator coroutine;
 
     public int currentBattery;
